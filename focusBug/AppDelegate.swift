@@ -15,6 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var windows: [Int:NSWindow] = [:]
     var windowCount = 0
 
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        newWindow()
+    }
     @IBAction func newFocusWindow(_ sender: NSMenuItem) {
         newWindow()
     }
@@ -33,10 +36,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //window.setFrameAutosaveName("Window \(self.windowCount)")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
-
-    }
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        newWindow()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
