@@ -12,6 +12,7 @@
 		2F1915412416B0720024710D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1915402416B0720024710D /* Assets.xcassets */; };
 		2F1915442416B0720024710D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1915432416B0720024710D /* Preview Assets.xcassets */; };
 		2F1915472416B0720024710D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1915452416B0720024710D /* Main.storyboard */; };
+		2F1915502416B7670024710D /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F19154F2416B7670024710D /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2F1915462416B0720024710D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F1915482416B0720024710D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F1915492416B0720024710D /* focusBug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = focusBug.entitlements; sourceTree = "<group>"; };
+		2F19154F2416B7670024710D /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				2F19153C2416B06E0024710D /* AppDelegate.swift */,
 				2F19153E2416B06E0024710D /* ContentView.swift */,
+				2F19154F2416B7670024710D /* screenshot.png */,
 				2F1915402416B0720024710D /* Assets.xcassets */,
 				2F1915452416B0720024710D /* Main.storyboard */,
 				2F1915482416B0720024710D /* Info.plist */,
@@ -135,6 +138,7 @@
 				2F1915472416B0720024710D /* Main.storyboard in Resources */,
 				2F1915442416B0720024710D /* Preview Assets.xcassets in Resources */,
 				2F1915412416B0720024710D /* Assets.xcassets in Resources */,
+				2F1915502416B7670024710D /* screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

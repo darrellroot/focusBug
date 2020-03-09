@@ -13,7 +13,7 @@ struct ContentView: View {
     let windowCount: Int
     var body: some View {
         VStack {
-            Text("Focus Window \(windowCount)")
+            Text("Focus Window \(windowCount)").focusable()
             inFocus ? Text("This window thinks it is in focus") : Text("This window does not think it is in focus")
         }.padding(50).focusable() { newFocus in
             debugPrint("onFocusChange: \(newFocus)")
