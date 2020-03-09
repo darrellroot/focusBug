@@ -12,22 +12,31 @@ import SwiftUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var window: NSWindow!
+    var windows: [Int:NSWindow] = [:]
+    var windowCount = 0
 
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
-        // Create the window and set the content view. 
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+    @IBAction func newFocusWindow(_ sender: NSMenuItem) {
+        newWindow()
+    }
+    func newWindow() {
+        windowCount = windowCount + 1
+        let contentView = ContentView(windowCount: windowCount)
+        let window = NSWindow(
+            contentRect: NSRect(x: 100, y: 100, width: 1000, height: 1000),
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false)
+        window.isReleasedWhenClosed = false
+        windows[windowCount] = window
+        window.title = "Focus Window \(self.windowCount)"
+        window.tabbingMode = .disallowed
         window.center()
-        window.setFrameAutosaveName("Main Window")
+        //window.setFrameAutosaveName("Window \(self.windowCount)")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+
+    }
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        newWindow()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
